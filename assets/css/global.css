@@ -5,6 +5,7 @@
 
 body {
     background-color: #000;
+    color: #FFF;
 }
 
 main {
@@ -13,4 +14,32 @@ main {
     border: 1px solid #FFF;
     color: #FFF;
     border-radius: 1rem;
+}
+
+.main::before {
+    content: '';
+    background-image: url('/assets/img/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.main::after {
+    content: 'Teste';
+    background-image: url('/assets/img/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 140vw;
+    height: 100vh;
+    transform: rotate(180deg);
 }
