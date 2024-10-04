@@ -8,5 +8,9 @@ body {
 }
 
 main {
+    margin: 1rem;
     padding: 1rem;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 1rem;
 }
