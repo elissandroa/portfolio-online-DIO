@@ -29,6 +29,15 @@
     background-color: transparent;
     color: #FFF;
     border: none;
+}
+
+.acordeon .trigger h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.acordeon .trigger:hover {
     cursor: pointer;
 }
 
@@ -41,7 +50,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('/assets//img/icons/arrow-top.svg');
-    background-repeat: no-repeat;
     transition: .25s;
 }
 
@@ -52,11 +60,13 @@
 .acordeon .content {
     overflow: hidden;
     height: 0;
+    opacity: 0;
     transition: opacity 0.25 ease-in-out;
 }
 
 .acordeon.open .content {
-    display: inline-block;
+    display: block;
+    padding: 1rem 0 1rem 2rem;
     height: auto;
     opacity: 1;
 }
