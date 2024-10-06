@@ -13,7 +13,6 @@
     flex-direction: column;
     justify-content: flex-start;
     margin: 1rem 0;
-
 }
 
 .portfolio li .title {
@@ -22,6 +21,7 @@
     align-items: center;
     font-size: 1.25rem;
     font-weight: 700;
+    margin: 0;
     margin-bottom: .5rem;
 }
 
