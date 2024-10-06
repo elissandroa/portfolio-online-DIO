@@ -1,9 +1,9 @@
 
 
-function updateProfileInfo(profileData){
+function updateProfileInfo(profileData) {
     const photo = document.getElementById('profile.photo');
     photo.src = profileData.photo;
-    photo.alt= profileData.name;
+    photo.alt = profileData.name;
 
     const name = document.getElementById("profile.name");
     name.innerText = profileData.name;
@@ -17,27 +17,34 @@ function updateProfileInfo(profileData){
     const phone = document.getElementById("profile.phone");
     phone.href = `tel:${profileData.phone}`;
     phone.innerText = profileData.phone;
-    
+
     const email = document.getElementById("profile.email");
     email.href = `mailto:${profileData.email}`;
     email.innerText = profileData.email;
 }
 
-function updateSoftSkills(profileData){
+function updateSoftSkills(profileData) {
     const softSkills = document.getElementById('profile.skills.softSkills');
-    softSkills.innerHTML = profileData.skills.softSkills.map( skill => `<li>${skill}</li>`).join('');
-        
+    softSkills.innerHTML = profileData.skills.softSkills.map(skill => `<li>${skill}</li>`).join('');
+
 
 }
 
-function updateHardSkills(profileData){
+function updateHardSkills(profileData) {
     const hardSkills = document.getElementById('profile.skills.hardSkills');
-    hardSkills.innerHTML = profileData.skills.hardSkills.map( skill => `<li><img src="${skill.logo}" alt="${skill.name}" title="${skill.name}"></li>`).join('');
+    hardSkills.innerHTML = profileData.skills.hardSkills.map(skill => `<li><img src="${skill.logo}" alt="${skill.name}" title="${skill.name}"></li>`).join('');
 }
 
-(async  () => {
+function updateLanguages(profileData) {
+    const languages = document.getElementById('languages');
+    languages.innerHTML = profileData.languages.map((language) => `<li>${language}</li>`).join('');
+}
+
+
+(async () => {
     const profileData = await fetchProfileData();
     updateProfileInfo(profileData);
     updateSoftSkills(profileData);
     updateHardSkills(profileData);
+    updateLanguages(profileData);
 })()
