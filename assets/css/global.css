@@ -16,6 +16,20 @@ main {
     border-radius: 1rem;
 }
 
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
 .main::before,
 .main::after {
     content: '';
@@ -40,11 +54,12 @@ main {
     transform: rotate(180deg);
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
     .main {
         max-width: 1024px;
         margin: 1rem auto;
     }
+
     .main::before,
     .main::after {
         width: 70vw;

@@ -35,12 +35,3 @@
     background-size: contain;
     margin-right: .5rem;
 }
-
-.portfolio li a {
-    text-decoration: none;
-}
-
-.portfolio li a:hover {
-    color: #FFF;
-    text-decoration: underline;
-}
